@@ -11,7 +11,7 @@ function generatePlayers(count) {
     const name = (i === 1) ? 'Astarum' : `Jugador ${i}`;
     // Discord data for Astarum
     const astarumDiscordId = '1056681722353303614';
-    const astarumAvatar = 'file:///C:/Users/Diegoo/Downloads/1f05e6cb522cc355812f8f7c4685ea01.jpg'; // local image provided by user
+    const astarumAvatar = 'assets/astarum-avatar.jpg'; // avatar stored in assets folder
     const discordElement = (i === 1)
       ? `<a class="discord" href="https://discord.com/users/${astarumDiscordId}" target="_blank" rel="noopener noreferrer">Discord</a>`
       : `<button class="discord">Discord</button>`;
@@ -61,7 +61,7 @@ function showPlayerDetail(playerName) {
       <button class="close-x" id="detail-close">✕</button>
       <div class="avatar-wrap">
         <div class="avatar-large">
-          ${playerName.toLowerCase() === 'astarum' ? `<img src="file:///C:/Users/Diegoo/Downloads/1f05e6cb522cc355812f8f7c4685ea01.jpg" alt="${playerName}">` : '<div style="width:100%;height:100%;background:#223;">' + '</div>'}
+          ${playerName.toLowerCase() === 'astarum' ? `<img src="assets/astarum-avatar.jpg" alt="${playerName}">` : '<div style="width:100%;height:100%;background:#223;">' + '</div>'}
         </div>
       </div>
       <h3>${playerName}</h3>

@@ -16,6 +16,10 @@ function generatePlayers(count) {
       ? `<a class="discord" href="https://discord.com/users/${astarumDiscordId}" target="_blank" rel="noopener noreferrer">Discord</a>`
       : `<button class="discord">Discord</button>`;
 
+    const youtubeElement = (i === 1)
+      ? `<a class="youtube" href="https://www.youtube.com/@astarumking" target="_blank" rel="noopener noreferrer">YouTube</a>`
+      : `<button class="youtube">YouTube</button>`;
+
     const regionList = ['NA','EU','ASIA','SA','OC'];
     const region = (i === 1) ? 'EU' : regionList[i % regionList.length];
 
@@ -32,7 +36,7 @@ function generatePlayers(count) {
         </div>
       </div>
       <div class="buttons">
-        <button class="youtube">YouTube</button>
+        ${youtubeElement}
         ${discordElement}
       </div>
     `;
